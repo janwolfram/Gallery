@@ -11,7 +11,7 @@ app.use(express.json());
 /* Load Blogsite */
 app.get('/api/blog', async (req, res) => {
   const content = await fs.readFile('data/blog.json');
-  const obj = JSON.parse(content);
+  const obj1 = JSON.parse(content);
   res.send(obj);
 })
 
@@ -20,3 +20,4 @@ app.get('/api/blog', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}.`);
 })
+
